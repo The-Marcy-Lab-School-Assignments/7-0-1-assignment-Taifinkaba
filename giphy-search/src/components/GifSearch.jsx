@@ -4,7 +4,7 @@ function GifSearch({ setQuery }) {
     const [query, setQueryState] = useState('');
 
     const onChangedInput=(e)=>{
-        setGifSearcher(e.target.value)
+        setQueryState(e.target.value)
     }
 
     const onSubmitForm = (event) => {
@@ -14,7 +14,7 @@ function GifSearch({ setQuery }) {
     return (
         <form onSubmit={onSubmitForm}>
             <label htmlFor="searchInput">Enter a Search Term </label>
-            <input type="text" className="form-control" id="searchInput" />
+            <input type="text" className="form-control" id="searchInput" value={query} onChange={onChangedInput} />
             <button type="submit" className="btn btn-success">Search</button>
         </form>
     )
