@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar';
 import GifSearch from './components/GifSearch';
 import GifContainer from './components/GifContainer';
-import API_KEY from './utils/config.js'
+import API_KEY from '../config.js'
 
 function App() {
   const [gifList, setGifList] = useState([]);
